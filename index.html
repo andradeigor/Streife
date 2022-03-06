@@ -207,7 +207,7 @@
       }
       .TableGamesItemLeftPart {
         height: 100%;
-        width: 30%;
+        min-width: 30%;
         display: flex;
         border-right: 1px solid #141414;
       }
@@ -229,11 +229,11 @@
         width: 10%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
       }
       .TableGamesItemGameScoreNumberText {
         text-align: end;
-        color: #fff;
+        color: #bdbdbd;
         font-weight: 600;
         font-size: 12px;
         margin-right: 15px;
@@ -243,13 +243,63 @@
         height: inherit;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
       }
       .TableGamesItemGameTeams p {
         font-size: 12px;
         font-weight: 300;
-        color: #fff;
+        color: #bdbdbd;
         margin-left: 10px;
+      }
+
+      .TableGamesItemMiddlePart {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .TableGamesItemGameChampionship {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+      }
+      .TableGamesItemGameChampionshipTitle {
+        font-size: 12px;
+        color: #bdbdbd;
+        font-weight: bold;
+        text-align: right;
+      }
+      .TableGamesItemGameChampionshipSubTitle {
+        font-size: 10px;
+        color: #bdbdbd;
+        font-weight: 400;
+        text-align: right;
+      }
+      .TableGamesItemGameChampionshipIcon {
+        width: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid #141414;
+        border-width: 0px 0px 0px 1px;
+      }
+
+      .TableGamesItemRightPart {
+        min-width: 100px;
+        height: inherit;
+        border: solid #141414;
+        border-width: 0px 1px 0px 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .TableGamesItemHour {
+        font-weight: bold;
+        color: #bdbdbd;
+        font-size: 12px;
       }
       .TableGamesButtonContainer {
         width: 100%;
@@ -415,6 +465,33 @@
                       <p class="TableGamesItemGameScoreNumberText">0</p>
                     </div>
                   </div>
+                </div>
+                <div class="TableGamesItemMiddlePart">
+                  <div class="TableGamesItemGameChampionshipIcon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.66666 4V9.33333C2.67012 11.508 3.432 13.6133 4.821 15.2867C6.21 16.9599 8.13912 18.0963 10.276 18.5C11.3451 19.9155 12.9043 20.8808 14.648 21.2067V25.3333H9.33332V28H22.6667V25.3333H17.3147V21.2107C19.0725 20.8924 20.6464 19.9248 21.724 18.5C23.8608 18.0963 25.79 16.9599 27.1789 15.2867C28.568 13.6133 29.3299 11.508 29.3333 9.33333V4H2.66666ZM5.33332 9.33333V6.66667H8.11466L8.85599 14.8093C8.86799 14.9493 8.91066 15.076 8.93066 15.216C7.85036 14.6583 6.94376 13.8148 6.30948 12.7776C5.67522 11.7404 5.33758 10.5491 5.33332 9.33333ZM26.6667 9.33333C26.6621 10.5494 26.3241 11.7409 25.6893 12.7781C25.0547 13.8153 24.1475 14.6585 23.0667 15.216C23.0867 15.0827 23.1293 14.9493 23.1413 14.8093L23.8853 6.66667H26.6667V9.33333Z"
+                        fill="#bdbdbd"
+                      />
+                    </svg>
+                  </div>
+                  <div class="TableGamesItemGameChampionship">
+                    <p class="TableGamesItemGameChampionshipTitle">
+                      LCK Spring 2022 Regular season
+                    </p>
+                    <p class="TableGamesItemGameChampionshipSubTitle">
+                      Regular season - Regular season
+                    </p>
+                  </div>
+                </div>
+                <div class="TableGamesItemRightPart">
+                  <p class="TableGamesItemHour">15:00h</p>
                 </div>
               </li>
               <li></li>
