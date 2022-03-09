@@ -180,6 +180,7 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding: 20px;
       }
       .InputContainer {
         height: 64px;
@@ -205,8 +206,9 @@
         color: #fff;
       }
       .InputRadioContainer {
+          margin:10px 0px;
         width: 100%;
-        margin-left: 64px;
+        margin-left: 30px;
       }
       .inputRadio {
           display: none;
@@ -231,13 +233,86 @@
       }
       .inputRadio:hover + .GameInputSvg3 path,
       .inputRadio:checked + .GameInputSvg3 path {
-        fill: #001a6c;
+        fill: #0050D2;
       }
       .GameInputSvg path,
       .GameInputSvg2 path,
       .GameInputSvg3 path {
-        fill:#404040
-        
+        fill:#404040(0, 1%, 24%)
+      }
+      .InputRadioContainer label{
+          margin-bottom: 5px;
+        color: #FFF
+
+      }
+      .InputTeams{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+      }
+      .InputTeam{
+          width: 400px;
+          
+      }
+      .InputTeam h2{
+          color: #FFF;
+          font-weight: 300;
+          font-size: 16px;
+      }
+      .InputTeams select{
+        width: 400px;
+        height: 42px;
+        border-radius: 8px;
+        background-color: #303030;
+        border: none;
+        color: #FFF;
+        padding-left: 10px;
+        font-size: 14px; 
+      }
+      .InputData{
+          display:flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .InputDataTitle{
+            width: 100%;
+            color: #FFF;
+            font-weight: 300;
+            font-size:18px;
+            margin: 10px 0px 10px 38px;
+        }
+    .InputTime{
+        width: 400px;
+        height: 42px;
+        border-radius: 8px;
+        background-color: #303030;
+        border: none;
+        color: #FFF;
+        padding-left: 10px;
+        font-size: 14px;    }
+    
+        .SubmitContainer{
+            width: 100%;
+            height: 64px;
+            margin: 40px 0px 0px 30px
+        }
+        .SubmitContainer button{
+            width: 100px;
+            height: 32px;
+            border: none;
+            border-radius: 16px;
+            background-color: #303030;
+            cursor: pointer;
+            box-shadow: 0 3px 4px rgb(0 0 0 / 19%), 0 3px 3px;
+        }
+        .SubmitContainer p{
+            font-size: 14px;
+            color: #bdbdbd;
+        }
+        .SubmitContainer button:hover {
+        transition: ease 0.3s;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3), 0 4px 6px;
       }
     </style>
   </head>
@@ -406,6 +481,65 @@
                   </svg>
                 </label>
               </div>
+            </div>
+            <div class="InputTeams">
+                <div class="InputTeam">
+                    <h2>Time 1</h2>
+                    <select name="Time1" id="">
+                        <option value="navi">Navi</option>
+                        <option value="furia">Furia</option>
+                        <option value="liberty">Liberty</option>
+                        <option value="pain">Pain</option>
+                        <option value="loud">Loud</option>
+                        <option value="liquid">Team Liquid</option>
+                        <option value="c9">Cloud9</option>
+                        <option value="100t">100 Thieves</option>
+                        <option value="tsm">Team Solo Mid</option>
+                        <option value="g2">G2</option>
+                        <option value="mad">Mad Lions</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="geng">Gen G</option>
+                        <option value="damwon">Damwon</option>
+                        <option value="kt">KT Rolster</option>
+                        <option value="skt">SKT</option>
+                    </select>
+                </div>              
+                 <div class="InputTeam">
+                    <h2>Time 2</h2>
+                    <select name="Time1" id="">
+                        <option value="tsm">Team Solo Mid</option>
+                        <option value="navi">Navi</option>
+                        <option value="furia">Furia</option>
+                        <option value="liberty">Liberty</option>
+                        <option value="pain">Pain</option>
+                        <option value="loud">Loud</option>
+                        <option value="liquid">Team Liquid</option>
+                        <option value="c9">Cloud9</option>
+                        <option value="100t">100 Thieves</option>
+                        <option value="g2">G2</option>
+                        <option value="mad">Mad Lions</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="geng">Gen G</option>
+                        <option value="damwon">Damwon</option>
+                        <option value="kt">KT Rolster</option>
+                        <option value="skt">SKT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="InputData">
+
+                <h2 class="InputDataTitle">Data da partida:</h2>
+                <div class="InputTeam">
+                    <h2>Dia:</h2>
+                    <input type="date" name="" id="" class="InputTime">
+                </div>
+                <div class="InputTeam">
+                    <h2>Hora:</h2>
+                    <input type="time" class="InputTime">
+                </div>
+            </div>
+            <div class="SubmitContainer">
+                <button type="submit"><p>Enviar</p></button>
             </div>
           </div>
         </form>
