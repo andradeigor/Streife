@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Streife</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      header {
+        width: 100%;
+        height: 64px;
+        background-color: #141414;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      body {
+        background-color: #101010;
+      }
+      .HeaderContentContainer {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+      }
+      .SearchForm {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .SearchInput {
+        width: 80%;
+        margin: 0px 20px;
+        height: 32px;
+        background-color: #303030;
+        border: none;
+        border-radius: 8px;
+        padding-left: 15px;
+        color: #fff;
+      }
+      .SearchInput::placeholder {
+        color: #bdbdbd;
+      }
+      .SearchButton {
+        width: 100px;
+        height: 32px;
+        border: none;
+        border-radius: 16px;
+        background-color: #303030;
+        cursor: pointer;
+      }
+      .SearchButton::activa {
+        transform: scale(1.001) perspective(0px);
+      }
+      .SearchP {
+        font-size: 14px;
+        color: #bdbdbd;
+      }
+      main {
+        width: 100%;
+      }
+      .SubHeader {
+        width: 100%;
+        height: 64px;
+        background-color: #181818;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .SubHeaderItemContainer {
+        cursor: pointer;
+        background-color: none;
+        border: 3px solid #303030;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0px 25px;
+      }
+      .SubHeaderItemContainer2 {
+        cursor: pointer;
+        background-color: none;
+        border: 3px solid #303030;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0px 25px;
+      }
+      .SubHeaderItemContainer3 {
+        cursor: pointer;
+        background-color: none;
+        border: 3px solid #303030;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0px 25px;
+      }
+      .SubHeaderItemContainer3:hover {
+        border: 3px solid #f34983;
+      }
+      .SubHeaderItemContainer3:hover .GameSvg {
+        display: none;
+      }
+      .SubHeaderItemContainer3:hover .GameSvg2 {
+        display: inline;
+      }
+      .SubHeaderItemContainer:hover {
+        border: 3px solid #de9b35;
+      }
+      .SubHeaderItemContainer:hover .GameSvg {
+        display: none;
+      }
+      .SubHeaderItemContainer:hover .GameSvg2 {
+        display: inline;
+      }
+      .SubHeaderItemContainer2:hover {
+        border: 3px solid #001a6c;
+      }
+      .SubHeaderItemContainer2:hover .GameSvg {
+        display: none;
+      }
+      .SubHeaderItemContainer2:hover .GameSvg2 {
+        display: inline;
+      }
+      .GameSvg2 {
+        display: none;
+      }
+      .MathPageContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .MathTeamsContainer {
+        width: inherit;
+        display: flex;
+        height: 256px;
+
+        justify-content: center;
+      }
+      .MathTeamsScoreContainer {
+        display: flex;
+        width: 50%;
+
+        height: inherit;
+      }
+      .MathTeamScoreContainer {
+        width: 33%;
+        height: inherit;
+      }
+      .MathScoreContainer {
+        width: 33%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .MathScoreContainer h1 {
+        color: white;
+        font-weight: 500;
+        letter-spacing: 20px;
+        font-size: 64px;
+      }
+      .MathTeamScoreHeaderContainer {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .MathTeamScoreHeaderName {
+        color: white;
+        font-weight: 600;
+      }
+      .MathTeamScoreImageContainer {
+        width: 100%;
+        height: 192px;
+        background-color: #101010;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .TeamMembersContainer {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .TeamMembersWraper {
+        width: 50%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        border-radius: 20px;
+      }
+      .TeamMembersHeader {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        background-color: #141414;
+        border-radius: 20px 20px 0px 0px;
+      }
+      .TeamMembersHeaderTextConteiner {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .TeamMembersHeaderTextConteiner h1 {
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+      }
+      .TeamMembersMain {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .TeamMembersMainList {
+        width: 33%;
+        height: inherit;
+      }
+      .TeamMembersMainList ul {
+        width: 100%;
+        height: 100%;
+        border: solid #141414;
+        border-width: 0px 1px 0px 1px;
+      }
+      .TeamMembersMainList li {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #141414;
+        border-width: 1px 0px 0px 0px;
+      }
+      .TeamMembersMainList p {
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="HeaderContentContainer">
+        <img src="https://www.strafe.com/logo.svg" alt="Logo Marca" />
+        <form class="SearchForm">
+          <input type="text" class="SearchInput" placeholder="Pesquisar..." />
+          <button class="SearchButton"><p class="SearchP">Procurar</p></button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <!-- SubHeader-->
+      <div class="MathPageContainer">
+        <div class="MathTeamsContainer">
+          <div class="MathTeamsScoreContainer">
+            <div class="MathTeamScoreContainer">
+              <div class="MathTeamScoreHeaderContainer">
+                <h1 class="MathTeamScoreHeaderName">Loud</h1>
+              </div>
+              <div class="MathTeamScoreImageContainer">
+                <img
+                  src="https://res.cloudinary.com/strafe/image/upload/h_128/pandascore/team/image/128313/lou_dlogo_square.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--Acaba o time 1-->
+            <div class="MathScoreContainer">
+              <div class="MathTeamScoreHeaderContainer"></div>
+              <div class="MathTeamScoreImageContainer">
+                <h1>0-0</h1>
+              </div>
+            </div>
+            <!--Acaba o score-->
+            <div class="MathTeamScoreContainer">
+              <div class="MathTeamScoreHeaderContainer">
+                <h1 class="MathTeamScoreHeaderName">Furia</h1>
+              </div>
+              <div class="MathTeamScoreImageContainer">
+                <img
+                  src="https://res.cloudinary.com/strafe/image/upload/h_128/abios/competitors/FuriaEsports-Teamlogo.png.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--Acaba o time 2-->
+          </div>
+        </div>
+      </div>
+      <div class="TeamMembersContainer">
+        <div class="TeamMembersWraper">
+          <div class="TeamMembersHeader">
+            <div class="TeamMembersHeaderTextConteiner">
+              <h1>IEM Katocoisa</h1>
+              <h1>16:00</h1>
+              <h1>22/06/2022</h1>
+            </div>
+          </div>
+          <div class="TeamMembersMain">
+            <div class="TeamMembersMainList">
+              <ul>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+              </ul>
+            </div>
+            <div class="TeamMembersMainList">
+              <ul>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+                <li><p>Niko</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script></script>
+</html>
